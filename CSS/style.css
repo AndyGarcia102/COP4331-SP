@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #3b444b;
+    transition: 0.5s;
+}
+
+.container{
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+}
+
+.inner{
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff0;
+    box-shadow: 0 5px 45px rgba(0,0,0,0.15);
+}
+
+.inner .traversal{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inner .traversal h2{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.inner .traversal button{
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff4e1;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+}
+
+.formBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 45px rgba(0,0,0,0.25);
+    transition: 0.5s ease-in-out;
+}
