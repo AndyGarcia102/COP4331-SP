@@ -1,5 +1,5 @@
 # COP4331-SP
-Repository contains work done by: Andy Garcia, ..., ..., ..., and ...
+Repository contains work done by: Andy Garcia, Matías Libryk, ..., ..., and ...
 
 Our website is a full stack project meeting the following requirments.
 
