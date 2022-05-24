@@ -3,7 +3,7 @@ Repository contains work done by: Andy Garcia, Matías Libryk, ..., ..., and ...
 
 Our website is a full stack project meeting the following requirments.
 
-Requiurments:
+Requirements:
 Use a LAMP stack. (Please do not use any Python-based framework)
 Use JSON to communicate between client and server. During the presentation, you must show access to at least one API endpoint using SwaggerHub.
 You will use a web page as the client. (A web page must be AJAX enabled that accesses the API.)
