@@ -77,6 +77,7 @@ body{
     align-items: center;
     box-shadow: 0 5px 45px rgba(0,0,0,0.25);
     transition: 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 .formBox.active{
@@ -88,7 +89,24 @@ body{
     left: 0;
     width: 100%;
     padding: 50px;
-    transform: 0.5s;
+    transition: 0.5s;
+}
+
+.formBx .inForm {
+    transition-delay: 0.25s;
+}
+
+.formBox.active .inForm {
+    left: -100%;
+    transition-delay: 0s;
+}
+
+.formBox .upForm {
+    left: 100%;
+}
+
+.formBox.active .upForm {
+    left: 0;
 }
 
 .formBox .sign form{
@@ -101,10 +119,25 @@ body{
     font-size: 1.4em;
     color: #333;
     margin-bottom: 20px;
-    padding-top: 10px;
 }
 
 .formBox .sign form input{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid #333;
+}
+
+.formBox .sign form input[type="submit"]{
+    background: #03a9f4;
+    border: none;
+    color: #fff;
+    max-width: 100px;
+    cursor: pointer;
+}
+
+.formBox .sign form .forgot{
+    color: #333;
 }
