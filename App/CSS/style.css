@@ -138,6 +138,6 @@ body{
     cursor: pointer;
 }
 
-.formBox .sign form .forgot{
-    color: #333;
+.formBox .sign form input[type="submit"]:hover{
+    background: #6ccaf6;
 }
