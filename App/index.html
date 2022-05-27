@@ -39,21 +39,21 @@
 		<!-- Forms -->
 		<div class="formBox">
 			<div class="sign inForm">
-				<form action="Main.html" method="post" name="signin-form">
+				<form action="#" method="post" name="signin-form">
 					<h3>Sign in</h3>
-					<input type="text" placeholder="Username">
-					<input type="password" placeholder="Password">
-					<input type="submit" value="Login">
+					<input type="text" id="loginName" placeholder="Username">
+					<input type="password" id="loginPassword" placeholder="Password">
+					<input type="submit" id="loginButton" value="Login" onclick="doLogin();">
 				</form>
 			</div>
 
 			<div class="sign upForm">
 				<form action="#" method="post" name="signup-form">
 					<h3>Sign up</h3>
-					<input type="text" id="userName" placeholder="Username">
+					<input type="text" id="createName" placeholder="Username">
 					<input type="text" id="firstName" placeholder="First Name">
 					<input type="text" id="lastName" placeholder="Last Name">
-					<input type="password" id="password" placeholder="Password">
+					<input type="password" id="createPassword" placeholder="Password">
 					<input type="submit" value="Submit">
 				</form>
 			</div>
