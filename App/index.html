@@ -41,8 +41,8 @@
 			<div class="sign inForm">
 				<form action="#" method="post" name="signin-form">
 					<h3>Sign in</h3>
-					<input type="text" id="loginName" placeholder="Username">
-					<input type="password" id="loginPassword" placeholder="Password">
+					<input type="text" id="loginName" placeholder="Username" required>
+					<input type="password" id="loginPassword" placeholder="Password" required>
 					<input type="submit" id="loginButton" value="Login" onclick="doLogin();">
 				</form>
 			</div>
@@ -50,10 +50,10 @@
 			<div class="sign upForm">
 				<form action="#" method="post" name="signup-form">
 					<h3>Sign up</h3>
-					<input type="text" id="createName" placeholder="Username">
-					<input type="text" id="firstName" placeholder="First Name">
-					<input type="text" id="lastName" placeholder="Last Name">
-					<input type="password" id="createPassword" placeholder="Password">
+					<input type="text" id="createName" placeholder="Username" required>
+					<input type="text" id="firstName" placeholder="First Name" required>
+					<input type="text" id="lastName" placeholder="Last Name" required>
+					<input type="password" id="createPassword" placeholder="Password" required>
 					<input type="submit" value="Submit">
 				</form>
 			</div>
