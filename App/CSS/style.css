@@ -109,19 +109,19 @@ body{
     left: 0;
 }
 
-.formBox .sign form{
+.formBox .sign .form{
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.formBox .sign form h3{
+.formBox .sign .form h3{
     font-size: 1.4em;
     color: #333;
     margin-bottom: 20px;
 }
 
-.formBox .sign form input{
+.formBox .sign .form input{
     width: 100%;
     margin-bottom: 20px;
     padding: 10px;
@@ -130,14 +130,16 @@ body{
     border: 1px solid #333;
 }
 
-.formBox .sign form input[type="submit"]{
+.formBox .sign .form button{
     background: #03a9f4;
     border: none;
     color: #fff;
     max-width: 100px;
+    height: 35px;
     cursor: pointer;
+    font-size: 1em;
 }
 
-.formBox .sign form input[type="submit"]:hover{
+.formBox .sign .form button:hover{
     background: #6ccaf6;
 }

@@ -11,14 +11,16 @@
 	<title>Login Form</title>
 
 	<!-- Style sheet-->
-	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/code.js"></script>
 
 </head>
 <body>
+	<!-- PHP -->
+	
 	<!-- Container holds all layers-->
 	<div class="container">
-
+		
 		<!-- Box layer that holds form boxes-->
 		<div class="inner Layer">
 
@@ -40,23 +42,24 @@
 		<!-- Forms -->
 		<div class="formBox">
 			<div class="sign inForm">
-				<form action="#" method="post" name="signin-form">
+				<div class="form in" name="signin-form">
 					<h3>Sign in</h3>
-					<input type="text" id="loginName" placeholder="Username" required>
-					<input type="password" id="loginPassword" placeholder="Password" required>
-					<input type="submit" id="loginButton" value="Login" onclick="doLogin();">
-				</form>
+					<input type="text" id="loginName" placeholder="Username">
+					<input type="password" id="loginPassword" placeholder="Password">
+					<button type="button" id="loginButton" class="buttons" onclick="doLogin();">Login</button>
+					<span id="loginResult"></span>
+				</div>
 			</div>
 
 			<div class="sign upForm">
-				<form action="#" method="post" name="signup-form">
+				<div class="form up" name="signup-form">
 					<h3>Sign up</h3>
-					<input type="text" id="createName" placeholder="Username" required>
-					<input type="text" id="firstName" placeholder="First Name" required>
-					<input type="text" id="lastName" placeholder="Last Name" required>
-					<input type="password" id="createPassword" placeholder="Password" required>
-					<input type="submit" value="Submit">
-				</form>
+					<input type="text" id="usertename" placeholder="Username">
+					<input type="text" id="firstName" placeholder="First Name">
+					<input type="text" id="lastName" placeholder="Last Name">
+					<input type="password" id="password" placeholder="Password">
+					<button type="button" id="signupButton" class="buttons">Login</button>
+				</div>
 			</div>
 		</div>
 
