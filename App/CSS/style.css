@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 *{
     margin: 0;
@@ -12,15 +13,24 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #3b444b;
+    background: #000;
     transition: 0.5s;
 }
 
 .container{
-    position: relative;
+    position: absolute;
     width: 800px;
     height: 500px;
     margin: 20px;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
 }
 
 .inner{
@@ -31,8 +41,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ff0;
-    box-shadow: 0 5px 45px rgba(0,0,0,0.15);
+    background: #000;
+    box-shadow: 0 5px 45px rgba(248, 245, 245, 0.432);
+    color: #fff;
 }
 
 .inner .traversal{
@@ -53,15 +64,48 @@ body{
 .inner .traversal button{
     cursor: pointer;
     padding: 10px 20px;
-    background: #fff4e1;
-    color: #333;
+    background: #000;
+    color: #fff;
     font-size: 16px;
     font-weight: 500;
-    border: none;
+    border: 1px solid #FFF;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+    transition: 0.3s;
+    border-radius: 5px;
 }
 
-.inner .traversal button:hover{
+.inner .traversal button:hover {
+    color: #000;
+}
+
+.inner .traversal button:nth-child(2){
+    filter: hue-rotate(80deg);
+}
+
+.inner .traversal button::before{
+    content:'';
+    position: absolute;
+    left: -11px;
+    top: 50%;
+    transform: translate(-50%);
+    width: 20px;
+    height: 2px;
     background: #fff;
+    box-shadow: 5px -8px 0 #fff,
+                5px 8px 0 #fff;
+}
+
+.inner .traversal button::after{
+    content: '';
+    position: absolute;
+    right: -31px;
+    top: 50%;
+    transform: translate(-50%);
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    box-shadow: -5px -8px 0 #fff,
+                -5px 8px 0 #fff;
 }
 
 .formBox{
@@ -115,15 +159,21 @@ body{
     flex-direction: column;
 }
 
+.formBox .sign .form h2{
+    font-family: 'Satisfy', cursive;
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
 .formBox .sign .form h3{
     font-size: 1.4em;
-    color: #333;
+    color: #000;
     margin-bottom: 20px;
 }
 
 .formBox .sign .form input{
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 10px;
     outline: none;
     font-size: 16px;
@@ -131,15 +181,16 @@ body{
 }
 
 .formBox .sign .form button{
-    background: #03a9f4;
+    background: #000;
     border: none;
     color: #fff;
-    max-width: 100px;
+    max-width: 100%;
     height: 35px;
     cursor: pointer;
     font-size: 1em;
+    border-radius: 5px;
 }
 
 .formBox .sign .form button:hover{
-    background: #6ccaf6;
+    opacity: .75;
 }

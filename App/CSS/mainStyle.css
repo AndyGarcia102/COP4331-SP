@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 
 *{
     margin: 0;
@@ -9,20 +10,32 @@
 }
 
 body{
-    background: #3b444b;
+    background: #000000;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
 }
 
 nav{
     height: 80px;
     width: 100%;
-    background: #ff0;
+    background: #000;
+    border-bottom: 1px solid white;
 }
 
 label.title{
     font-size: 40px;
     font-weight: bold;
     padding: 0px 75px;
-    line-height: 80px;;
+    line-height: 80px;
+    color: white;
+    font-family: 'Satisfy', cursive;
 }
 
 nav ul{
@@ -42,7 +55,7 @@ nav a{
     border: 1px solid transparent;
     padding: 7px 10px;
     border-radius: 3px;
-    background: #2dc9f0;
+    background: #fff;
 }
 
 nav a.active{
@@ -51,7 +64,9 @@ nav a.active{
 }
 
 a:hover{
-    background: #11a2f7;
+    background: #bbbaba;
+    box-shadow: 0 5px 55px rgba(248, 248, 248, 0.61);
+    text-decoration: underline;
 }
 
 .body{
@@ -61,132 +76,54 @@ a:hover{
     width: 100%;
     height: 300px;
     position: relative;
+    /* background-color: #fff; */
 }
 
-.body h2{
+.body .searching{
     position: relative;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
-    color: white;
-    margin-top: 35px;
-    
-}
-
-h2{
-    font-size: 4em;
-}
-
-.search{
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: white;
-    border-radius: 60px;
-    transition: 0.5s;
-    box-shadow: 0 0 0 5px #3b444b;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
     margin: auto;
-    overflow: hidden;
-}
-
-.body .search .lens{
-    position: absolute;
-    left: 15px;
-    top: 15px;
+    top: 50px;
+    width: 50%;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
-    color: #3b444b;
-    cursor: pointer;
+    background: #000;
+    box-shadow: 0 5px 45px rgba(248, 245, 245, 0.432);
+    border-radius: 100px;
+    color: #fff;
 }
 
-
-.body .search.lens::before{
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    border: 3px solid #3b444b;
-    border-radius: 50%;
-}
-
-.body .search.lens::after{
-    content:'';
-    position: absolute;
-    width: 3px;
-    height: 12px;
-    background-color: #3b444b;
-    transform: translate(6px,6px) rotate(315deg);
-}
-
-.body .search.active{
-    width: 360px;
-}
-
-.body .search .data{
+input{
     position: relative;
-    width: 300px;
-    height: 60px;
-    left: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    font-size: 35px;
+    box-sizing: border-box;
+    transition: .2s;
 }
 
-.body .search .data input{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
+input[type="text"]{
+    width: 550px;
+    height: 55px;
     border: none;
     outline: none;
-    font-size: 18px;
-    padding-left: 2px;
+    padding: 0 25px;
+    border-radius: 25px 0 0 25px;
 }
 
-.table{
-    position: absolute;
-    left: -100%;
-    transition: 0.5s;
-}
-
-table th{
-    text-align: center;
-}
-
-.table.active{
+input[type="submit"]{
     position: relative;
-    left: 0;
-    color: white;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 85%;
-}
-
-.clearbtn{
-    position: absolute;
-    top: 22%;
-    width: 35px;
-    height: 35px;
-    right: 15px;
+    left: -5px;
+    width: 200px;
+    height: 55px;
+    border-radius: 0 25px 25px 0;
+    border: none;
+    outline: none;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 100%;
+    background: #01BAEF;
 }
 
-.clearbtn.active{
-    left: 87%;
-}
-
-.clearbtn:hover{
-    color: #e2194b;
+input[type="submit"]:hover{
+    text-decoration: underline;
+    background: #62CCE9;
 }

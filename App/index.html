@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="author" content= "Andy Garcia">
 
-	<title>Login Form</title>
+	<title>Contact Atlas</title>
 
 	<!-- Style sheet-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -16,8 +16,6 @@
 
 </head>
 <body>
-	<!-- PHP -->
-	
 	<!-- Container holds all layers-->
 	<div class="container">
 		
@@ -43,10 +41,11 @@
 		<div class="formBox">
 			<div class="sign inForm">
 				<div class="form in" name="signin-form">
+					<h2>Contact Atlas</h2>
 					<h3>Sign in</h3>
-					<input type="text" id="loginName" placeholder="Username">
-					<input type="password" id="loginPassword" placeholder="Password">
-					<button type="button" id="loginButton" class="buttons" onclick="doLogin();">Login</button>
+					<input type="text" id="loginName" placeholder="Username" required = "required"><label for="Username"></label>
+					<input type="password" id="loginPassword" placeholder="Password" required = "required">
+					<button type="button" id="loginButton" class="buttons" onclick="doLogin();">Log in</button>
 					<span id="loginResult"></span>
 				</div>
 			</div>
@@ -54,16 +53,20 @@
 			<div class="sign upForm">
 				<div class="form up" name="signup-form">
 					<h3>Sign up</h3>
-					<input type="text" id="usertename" placeholder="Username">
-					<input type="text" id="firstName" placeholder="First Name">
-					<input type="text" id="lastName" placeholder="Last Name">
-					<input type="password" id="password" placeholder="Password">
-					<button type="button" id="signupButton" class="buttons">Login</button>
+					<input type="text" id="userName" placeholder="Username" required = "required">
+					<input type="text" id="firstName" placeholder="First Name" required = "required">
+					<input type="text" id="lastName" placeholder="Last Name" required = "required">
+					<input type="password" id="password" placeholder="Password" required = "required">
+					<button type="button" id="signupButton" class="buttons" onclick="doSignUp();">Create Account</button>
+					<span id="SignUpResult"></span>
 				</div>
 			</div>
 		</div>
-
 	</div>
+
+	<!-- Background script-->
+	<canvas class="background"></canvas>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
 	<script>
 		const signinBtn = document.querySelector('.signin-btn');
 		const signupBtn = document.querySelector('.signup-btn');
@@ -81,6 +84,21 @@
 			formBox.classList.remove('active')
 			body.classList.remove('active')
 		}
+
+		var particles = Particles.init({
+			selector: '.background',
+			color: ['#FFFFFF', '#c4c3d0'],
+			connectParticles: true,
+			responsive: [{
+				breakpoint: 500,
+				options: {
+					color: '#00C9B1',
+					maxParticles: 150,
+					connectParticles: false
+				}
+			}]
+		});
 	</script>
+	
 </body> 
 </html>
